@@ -36,15 +36,4 @@ describe('Lottery', () => {
     assert.equal(1, players.length)
   });
 
-  it('gets list of players', async () => {
-    const message = await lottery.methods.getPlayers().call()
-    assert.equal(message, 'Hi there!')
-  });
-
-  it('', async () => {
-    await lottery.methods.setMessage('Goodbye there!').send({ from: accounts[0] })
-
-    const message = await lottery.methods.message().call()
-    assert.equal(message, 'Goodbye there!')
-  })
 })
