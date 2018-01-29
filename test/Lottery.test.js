@@ -95,5 +95,8 @@ describe('Lottery', () => {
 
     assert(difference > web3.utils.toWei('1.8', 'ether'))
     assert.equal(0, players.length)
+
+    const lotteryBalance = await web3.eth.getBalance(lottery.options.address);
+    assert(lotteryBalance == 0);
   })
 })
